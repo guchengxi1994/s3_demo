@@ -1,0 +1,17 @@
+[package]
+name = "s3_demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aws-config = {version="0.56.0",features = ["rustls"]} 
+aws-sdk-s3 = { version = "0.29.0",features = ["rustls"]}
+aws-types = {version="0.56.0", feature = ["hardcoded-credentials"]}
+aws-credential-types = "0.56.0"
+aws-smithy-types = {version="0.56.0"}
+aws-smithy-client = {version="0.56.0"}
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+hyper-rustls = {version="0.24.1",features=["webpki-roots"]} 
